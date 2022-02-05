@@ -18,6 +18,7 @@ def run():
     print("First 10 - ", x[:10])
     print()
 
+    #assigns stations associated with each river to a variable and sorts alphabetically
     station_aire = sorted(stations_by_river(stations)['River Aire'])
     station_cam = sorted(stations_by_river(stations)['River Cam'])
     station_thames = sorted(stations_by_river(stations)['River Thames'])
