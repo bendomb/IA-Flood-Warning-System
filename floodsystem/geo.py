@@ -36,14 +36,13 @@ def stations_within_radius(stations, centre, r):
     #list which will have stations within radius appended to it
 
     for station in stations:
-        distance = haversine(station.coord, p)
-        #calculates distance between station and p
+        distance = haversine(station.coord, centre)
+        #calculates distance between station and centre
         #station coordinate from stationdata
 
-        stations_list.append((station.name, distance))
-        #add stations data to stations_list
+        if distance <= r:
+            stations_list.append(station.name)
+            #add stations data to stations_list if within radius
 
-    sorted_stations_list = sorted_by_key(stations_list, 1)
-    #sorts stations by distance from p
-
-    return sorted_stations_list
+        
+    return stations_list
