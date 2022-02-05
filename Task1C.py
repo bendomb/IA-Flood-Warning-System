@@ -13,8 +13,11 @@ def run():
     # Defines radius
     r = 10
 
-    # Calls function
-    x = stations_within_radius(stations, centre, r)
+    # Calls function and sorts list
+    x = sorted(stations_within_radius(stations, centre, r))
 
-    print (x[:10])
-    print (x[-10:])
+    print (x)
+
+if __name__ == "__main__":
+    print("*** Task 1C: CUED Part IA Flood Warning System ***")
+    run()
