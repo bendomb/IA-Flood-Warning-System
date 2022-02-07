@@ -79,3 +79,41 @@ def stations_by_river(stations):
             # if the river is not already in the dictionary, add it and assign the station name as a value 
               
     return river_stations_dict
+
+"""Task 1E"""
+
+def rivers_by_station_number(stations, N):
+    """ function that returns an ordered list of rivers with highest number of monitoring stations.
+    The length of the list is determined by N """
+
+    rivers_and_num_stations = []
+    # create an empty list to put information in
+
+    for river in stations_by_river(stations):
+    # iterate through dictionary created using the stations_by_river function (Task 1D)
+
+        num_stations = len(stations_by_river(stations)[river])
+        # calculates number of stations associated with a river by the length of the list
+
+        rivers_and_num_stations.append( (river, num_stations) )
+        # add tuples of the format (river name, number of stations)
+    
+    rivers_and_num_stations.sort(reverse=True, key=lambda tup: tup[1])
+    # sort list by number of stations in order of highest to lowest
+
+    min_num_stations = rivers_and_num_stations[N-1][1]
+    # calculate number of stations for Nth river
+
+    shortened_list = []
+    # create an empty list to add the qualifying tuples into
+
+    for tuple in rivers_and_num_stations:
+    # iterate over tuples in the ordered list
+        if tuple[1] >= min_num_stations:
+        # if the number of stations is greater than or equal to the amount for the N'th river 
+
+            shortened_list.append(tuple)
+            # add the river to the shortened list
+            # this should be ordered since the rivers_and_num_stations is ordered
+    
+    return shortened_list
