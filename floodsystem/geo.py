@@ -20,7 +20,7 @@ def stations_by_distance(stations, p):
         distance = haversine(station.coord, p)
         #calculates distance between station and p
 
-        stations_list.append((station.name, distance))
+        stations_list.append([station, distance])
         #add stations data to stations_list
 
     sorted_stations_list = sorted_by_key(stations_list, 1)
