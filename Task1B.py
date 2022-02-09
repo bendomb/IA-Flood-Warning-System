@@ -17,7 +17,7 @@ def run():
     closest = []
     furthest = []
 
-
+    # prints list of tuples (station name, town and distance) for 10 closest and furthest stations
     for i in x[:10]:
         closest.append((i[0].name, i[0].town, i[1]))
     for i in x[-10:]:
