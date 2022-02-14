@@ -59,7 +59,7 @@ test_stations_by_distance()
 def test_stations_within_radius():
     
     # applying function to list
-    centre = (0,0)
+    centre = (0, 0)
     radius = 2.0
     TestResult1C = stations_within_radius(test_stations, centre, radius)
     print (TestResult1C)
@@ -70,8 +70,14 @@ test_stations_within_radius()
 
 # test for rivers_with_station()
 def test_rivers_with_station():
+    # check: the result of running this function should be River Cam and River Thames as these are the two rivers that have stations (no repeats)
     assert rivers_with_station(test_stations) == {'River Cam', 'River Thames'}
+
+test_rivers_with_station()
 
 # test for stations_by_river()
 def test_stations_by_river():
+    # check: the two stations that are on the River Cam are TestStation1 and 2
     assert sorted(stations_by_river(test_stations)['River Cam']) == [TestStation1.name, TestStation2.name]
+    
+test_stations_by_river()
