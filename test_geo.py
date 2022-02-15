@@ -60,10 +60,11 @@ test_stations_by_distance()
 def test_stations_within_radius():
     
     # applying function to list
-    centre = (0, 0)
-    radius = 2.0
-    TestResult1C = stations_within_radius(test_stations, centre, radius)
-    print (TestResult1C)
+    centre = (1.0, 1.0)
+    radius = 5
+    TestResult1C = sorted(stations_within_radius(test_stations, (0.5, 0.5), 4.0))
+    print ('test', TestResult1C)
+    # print ('test', s)
 '''NOT WORKING -.-'''
 test_stations_within_radius()
 
