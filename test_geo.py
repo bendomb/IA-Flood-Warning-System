@@ -3,42 +3,42 @@ from floodsystem.stationdata import build_station_list
 from floodsystem.station import MonitoringStation
 
 
-# '''TEST STATIONS: to be used in test functions to see if functions work with any inputs'''
+'''TEST STATIONS: to be used in test functions to see if functions work with any inputs'''
 
-# # creates attributes of test station 1
-# station_id1 = "test station id 1"
-# measure_id1 = "test measure id 1"
-# label1 = "TS1"
-# coord1 = (1.0, 4.0)
-# typical_range1 = (-2, 5)
-# river1 = "River Cam"
-# town1 = "Town 1"
-# # formats attributes as station under TestStation1
-# TestStation1 = MonitoringStation(station_id1, measure_id1, label1, coord1, typical_range1, river1, town1)
+# creates attributes of test station 1
+station_id1 = "test station id 1"
+measure_id1 = "test measure id 1"
+label1 = "TS1"
+coord1 = (1.0, 4.0)
+typical_range1 = (-2, 5)
+river1 = "River Cam"
+town1 = "Town 1"
+# formats attributes as station under TestStation1
+TestStation1 = MonitoringStation(station_id1, measure_id1, label1, coord1, typical_range1, river1, town1)
 
-# # creates attributes of test station 2
-# station_id2 = "test station id 2"
-# measure_id2 = "test measure id 2"
-# label2 = "TS2"
-# coord2 = (0.0, 1.0)
-# typical_range2 = (-2, 2)
-# river2 = "River Cam"
-# town2 = "Town 2"
-# # formats attributes as station under TestStation2
-# TestStation2 = MonitoringStation(station_id2, measure_id2, label2, coord2, typical_range2, river2, town2)
+# creates attributes of test station 2
+station_id2 = "test station id 2"
+measure_id2 = "test measure id 2"
+label2 = "TS2"
+coord2 = (0.0, 1.0)
+typical_range2 = (-2, 2)
+river2 = "River Cam"
+town2 = "Town 2"
+# formats attributes as station under TestStation2
+TestStation2 = MonitoringStation(station_id2, measure_id2, label2, coord2, typical_range2, river2, town2)
 
-# # creates attributes of test station 3
-# station_id3 = "test station id 3"
-# measure_id3 = "test measure id 3"
-# label3 = "TS3"
-# coord3 = (1.0, 1.0)
-# typical_range3 = (-2, 3)
-# river3 = "River Thames"
-# town3 = "Town 3"
-# # formats attributes as station under TestStation3
-# TestStation3 = MonitoringStation(station_id3, measure_id3, label3, coord3, typical_range3, river3, town3)
+# creates attributes of test station 3
+station_id3 = "test station id 3"
+measure_id3 = "test measure id 3"
+label3 = "TS3"
+coord3 = (1.0, 1.0)
+typical_range3 = (-2, 3)
+river3 = "River Thames"
+town3 = "Town 3"
+# formats attributes as station under TestStation3
+TestStation3 = MonitoringStation(station_id3, measure_id3, label3, coord3, typical_range3, river3, town3)
 
-# # list of TestStations
+# list of TestStations
 # test_stations = [TestStation1, TestStation2, TestStation3]
 
 # '''----------------Task 1B Test-----------------'''
