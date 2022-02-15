@@ -7,7 +7,7 @@ geographical data.
 """
 
 from .utils import sorted_by_key  # noqa
-from haversine import haversine
+from haversine import haversine, Unit
 
 """Task 1B"""
 def stations_by_distance(stations, p):
