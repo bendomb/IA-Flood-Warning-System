@@ -8,7 +8,7 @@ def run():
     # Build list of stations
     stations = build_station_list()
 
-    # Calls function to find rivers with N=9
+    # Calls function to find rivers with the value N=9
     print(rivers_by_station_number(stations, 9))
 
 if __name__ == "__main__":
