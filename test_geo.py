@@ -62,6 +62,7 @@ def test_stations_within_radius():
     centre = (1.0, 1.0)
     radius = 1
     TestResult1C = sorted(stations_within_radius(test_stations, centre, radius))
+    # check: the first station on the list should be TS3
     assert (TestResult1C[0]) == ('TS3')
 
 test_stations_within_radius()
