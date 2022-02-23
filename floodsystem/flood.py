@@ -9,7 +9,7 @@ update_water_levels(stations)
 def stations_level_over_threshold(stations, tol):
     listtuple=[]
     for station in stations:
-        if (station.typical_range_consistent() != False) and (station.relative_water_level != None):
+        if station.relative_water_level() != None and station.typical_range_consistent() != False:
             ratio = station.relative_water_level()
             if ratio > tol and ratio < 20:
                 listtuple.append([station.name, ratio])
