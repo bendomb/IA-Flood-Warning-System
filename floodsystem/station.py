@@ -38,7 +38,8 @@ class MonitoringStation:
         d += "   river:         {}\n".format(self.river)
         d += "   typical range: {}".format(self.typical_range)
         return d
-        
+
+    """Task 1F"""
     def typical_range_consistent(self):
 
         if self.typical_range and (self.typical_range[1] > self.typical_range[0]):
@@ -47,6 +48,17 @@ class MonitoringStation:
         else:
             return False
 
+    """Task 2B"""
+    def relative_water_level(self):
+        if self.typical_range != None and self.latest_level != None: # If there is data for both the typical range and current water level
+            into_range = self.latest_level - self.typical_range[0] # current level - lower bound -> finds how far into range current level is 
+            overall_range = self.typical_range[1] - self.typical_range[0] # range between high and low bounds
+            ratio = into_range / overall_range # work out the ratio between into_range and overall_range (interpolation)
+            return ratio
+        else:
+            return None
+
+"""Task 1F"""
 def inconsistent_typical_range_stations(stations):
 
     inconsistent_stations = []
