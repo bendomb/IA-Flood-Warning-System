@@ -5,6 +5,7 @@ import floodsystem.flood as flood
 stations = build_station_list()
 update_water_levels(stations)
 
+# creates a list of consistent stations
 consistent_stations = []
 for station in stations:
     if station.typical_range_consistent() == True:
