@@ -18,7 +18,7 @@ def run():
 
     for i in range(5):
 
-        station_name = top_five[i][0]
+        station_name = top_five[i][0].name
         
         station_check = None
         for station in stations:
