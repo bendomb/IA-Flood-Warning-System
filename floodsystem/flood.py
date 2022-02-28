@@ -32,7 +32,7 @@ def stations_highest_rel_level(stations, N):
         if station.relative_water_level() != None and station.typical_range_consistent() != False and station.relative_water_level()<20:
             ratio = station.relative_water_level()
             
-            highest_water_level.append((station.name, ratio))
+            highest_water_level.append((station, ratio))
 
     # orders list of stations by water level in descending order
     sorted_highest_water_level = sorted_by_key(highest_water_level, 1, reverse=True)

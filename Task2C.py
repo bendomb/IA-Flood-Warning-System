@@ -10,7 +10,7 @@ def run():
 
     high_list = flood.stations_highest_rel_level(stations, 10)
     for i in range(len(high_list)):
-        print(high_list[i][0], high_list[i][1])
+        print(high_list[i][0].name, high_list[i][1])
 
 if __name__ == "__main__":
     print("*** Task 2C: CUED Part IA Flood Warning System ***")
